@@ -1,0 +1,56 @@
+<script>
+function validate()
+{
+var name = form["myName"].value;
+if((name.length<5) || (name.length>15))
+{
+alert("User ID Required and must be of length 5 to 15");
+return false;
+}
+else 
+return true;
+}
+
+var form = document.getElementById("amir");
+form.onsubmit = validate();
+</script>
+<form name="myForm" action="http://www.java2s.com" id="amir">
+  User ID:<br>
+  <input type="text" name="myInput" required>
+  <br><br>
+  Password:<br>
+  <input type="text" name="myPassword" required>
+  <br><br>
+  Name:<br>
+  <input type="text" name="myName" required>
+  <br><br>
+  DOB:<br>
+  <input type="date" name="myDOB" required>
+  <br><br>
+  Photo:<br>
+  <input type="file" name="myPhoto" accept="image/*">
+  <br><br>
+  Email Address:<br>
+  <input type="email" name="myEmail" required>
+  <br><br>
+  Phone Address:<br>
+  <input type="text" name="myPhone" required>
+  <br><br>
+  Address:<br>
+  <input type="text" name="myAddress"><br>
+  <input type="text" name="myAddress">
+  <br><br>
+  Blog Address:<br>
+  <input type="text" name="myBlog" required>
+  <br><br>
+  Gender:<br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <br>
+  Language:<br>
+  <input type="checkbox" name="myLanguage" value="English">English<br>
+  <input type="checkbox" name="myLanguage" value="Hindi">Hindi<br>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+

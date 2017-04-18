@@ -1,0 +1,28 @@
+<style>
+
+#box
+{
+  background-color: steelblue;
+  height: 100px;
+  width: 100px;
+  transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s, height 1s; 
+  -o-transition: width 1s;
+}
+</style>
+
+<script>
+var element = document . getElementById ( "box" ) ;
+
+
+ element.addEventListener
+ (
+     "drag",
+     function ()
+     {
+         this . style . width = "200px" ;
+     }
+ ) ;
+</script>
+<div id="box"></div>

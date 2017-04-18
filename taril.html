@@ -1,0 +1,11 @@
+<input id="valR" type="range" min="0" max="100" value="0" oninput="showVal(this.value)" onchange="showVal(this.value)" />
+    <span id="range">0</span>
+
+<script>
+    
+    var val = document.getElementById("valR").value;
+        document.getElementById("range").innerHTML=val;
+        function showVal(newVal){
+          document.getElementById("range").innerHTML=newVal;
+        }
+</script>

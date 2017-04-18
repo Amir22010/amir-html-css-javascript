@@ -1,0 +1,115 @@
+<html>
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=url], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #1E90FF;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+div {
+    border-radius: 30px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.buttonHolder{ text-align: center; }
+</style>
+<script>
+function validate()
+{
+var u = document.myForm.myInput; 
+if(myInput_validate(u,5,15))
+{
+return true;}
+return false;
+}
+function myInput_validate(u,x,y)
+{
+var u_len = u.value.length;
+if (u_len == 0 || u_len > y || u_len < x)  
+{  
+alert("User Id should not be empty and length be between "+x+" to "+y);  
+u.focus();  
+return false;  
+}  
+return true;  
+}  
+</script>
+<div>
+<form name="myForm" action="http://www.java2s.com" onsubmit="return validate()">
+  User ID:<br>
+  <input type="text" name="myInput" placeholder="Required with input your user id with 5 to 15 characters only" required>
+  <br><br>
+  Password <label><b>must contain atleast one uppercase, one lowercase and one number:</b></label><br>
+  <input type="text" name="myPassword" placeholder="Required with input your password with 7 to 12 characters only" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,12}" required>
+  <br><br>
+  Name:<br>
+  <input type="text" name="myName" placeholder="Required" required>
+  <br><br>
+  DOB:<br>
+  <input type="date" name="myDOB" required>
+  <br><br>
+  Photo:<br>
+  <input type="file" name="myPhoto" accept="image/*">
+  <br><br>
+  Email Address <label><b>youremailid@domain.com:</b></label><br>
+  <input type="email" name="myEmail" placeholder="Required" required>
+  <br><br>
+  Phone Number <label><b>+XX(XX)XXXX-XXXX:</b></label><br>
+ <input type="text" name ="myPhone" placeholder="input your phone number in format written above" pattern= "[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" required >
+  <br><br>
+  Address:<br>
+  <input type="text" name="myAddress" placeholder="optional"><br>
+  <input type="text" name="myAddress" placeholder="optional">
+  <br><br>
+  Blog Address <label><b>http://yourblog.com:</b></label><br>
+  <input type="url" name="myBlog" placeholder="Required" required>
+  <br><br>
+  Gender:<br>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+   <input type="radio" name="gender" value="other"> Other<br>
+  <br>
+  Language:<br>
+  <input type="checkbox" name="myLanguage" value="English">English<br>
+  <input type="checkbox" name="myLanguage" value="Hindi">Hindi<br>
+  <br><br>
+  <div class="buttonHolder">
+  <input type="submit" value="Submit">
+  </div>
+</form> 
+</div>
+

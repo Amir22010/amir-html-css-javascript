@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+ div {
+    width: 300px;
+    height: 600px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    outline: 1px solid black;
+    float: left;
+    }
+</style>
+
+  <body>
+
+
+<script type="text/javascript">
+  var jsver = 1.0;
+  </script>
+  <script>
+ var boxArray = [];
+ boxArray = document.getElementsByClassName("box");
+        for ( var i = 0; i < boxArray.length; i++ ) (function(i){
+  boxArray[i].onmousemove = function(events) {
+      if(events.buttons == 1)
+    		boxArray[i].style.backgroundColor = "green";
+  }
+})(i);
+      </script>
+<div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    </div>
+	</body>
+</html>
+
+
+
+
+
+
