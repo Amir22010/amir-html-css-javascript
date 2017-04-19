@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+JS Assignment</title>
+</head>
+<body>
+<p id="myClass">This is mine</p>
+<button onclick="char.forEach(myFunction)">String to CharArray</button>
+<p id="demo"></p>
+<button onclick="char.forEach(charToString)">CharArray to String</button>
+<p id="demo1"></p>
+<script>
+var string = document.getElementById('myClass');
+var output = string.innerHTML;
+var char = output.split("");
+var character = document.getElementById("demo");
+function myFunction(index,i) {
+    character.innerHTML= character.innerHTML + "index[" + index + "]: " + i + "<br>"; 
+}
+var xyz = document.getElementById("demo1");
+function charToString()
+{
+var abc = char.join("");
+xyz.innerHTML=abc;
+}
+</script>
+</body>
+</html>
